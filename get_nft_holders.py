@@ -2,17 +2,17 @@ import os
 import requests
 import openpyxl
 
+# Set the EVM network [see Alchemy docs for supported networks]
+NETWORK = os.getenv('NETWORK')
+
 # Replace with your Alchemy API key
 ALCHEMY_API_KEY = os.getenv('ALCHEMY_API_KEY')
 
 # Define the PAPP contract address
-CONTRACT_ADDRESS = "0xF39bE779905D16fE23B2cC1297Dc3e759D2dAA11"
-
-# Set the Opensea SLUG
-GET_TOKEN_BALANCES = True
+CONTRACT_ADDRESS = os.getenv('CONTRACT_ADDRESS')
 
 # Get the data from Alchemy
-url = f"https://base-mainnet.g.alchemy.com/nft/v2/{ALCHEMY_API_KEY}/getOwnersForCollection?contractAddress={CONTRACT_ADDRESS}&withTokenBalances={GET_TOKEN_BALANCES}"
+url = f"https://{NETWORK}.g.alchemy.com/nft/v2/{ALCHEMY_API_KEY}/getOwnersForCollection?contractAddress={CONTRACT_ADDRESS}&withTokenBalances=true"
 headers = {"accept": "application/json"}
 response = requests.get(url, headers=headers)
 holder_data = response.json()

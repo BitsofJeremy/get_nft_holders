@@ -1,6 +1,7 @@
 # get_nft_holders
 
-A simple script to get all the holders of a NFT collection and export to a spreadsheet
+A simple script to get all the holders of an NFT collection and export to a spreadsheet
+
 
 # Install
 
@@ -22,7 +23,10 @@ This will create a spreadsheet called `nft_holders.xlsx` locally
 
 ### Example .env file
 
+    export NETWORK=base-mainnet
     export ALCHEMY_API_KEY=secret_key
+    # PunkApepen Smart Contract on Base L2
+    export CONTRACT_ADDRESS=0xF39bE779905D16fE23B2cC1297Dc3e759D2dAA11
 
 
 #### References
