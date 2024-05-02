@@ -23,3 +23,8 @@ This will create a spreadsheet called `nft_holders.xlsx` locally
 ### Example .env file
 
     export ALCHEMY_API_KEY=secret_key
+
+
+#### References
+
+Alchemy API Docs: https://docs.alchemy.com/reference/getownersforcollection
