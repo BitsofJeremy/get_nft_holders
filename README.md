@@ -2,6 +2,7 @@
 
 A simple script to get all the holders of an NFT collection and export to a spreadsheet
 
+***** ARCHIVED REPO *****
 
 # Install
 
